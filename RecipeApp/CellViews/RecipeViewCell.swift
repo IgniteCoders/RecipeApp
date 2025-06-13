@@ -12,7 +12,7 @@ class RecipeViewCell: UITableViewCell {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
     
-    func render(with recipe: Recipe) {
+    func render(_ recipe: Recipe) {
         recipeNameLabel.text = recipe.name
         recipeImageView.loadFrom(url: recipe.image)
     }

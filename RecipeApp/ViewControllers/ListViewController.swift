@@ -48,7 +48,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeViewCell
         let recipe = recipes[indexPath.row]
-        cell.render(with: recipe)
+        cell.render(recipe)
         return cell
     }
 
