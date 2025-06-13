@@ -15,4 +15,12 @@ struct Recipe: Codable {
     let id: Int64
     let name: String
     let image: String
+    let instructions: [String]
+    let ingredients: [String]
+    let prepTimeMinutes: Int
+    let cookTimeMinutes: Int
+    let servings: Int
+    let difficulty: String
+    let cuisine: String
+    let rating: Float
 }

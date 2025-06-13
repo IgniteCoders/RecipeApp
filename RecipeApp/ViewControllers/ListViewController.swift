@@ -52,5 +52,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailViewController = segue.destination as! DetailViewController
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            detailViewController.recipe = recipes[selectedIndexPath.row]
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
 }
 
