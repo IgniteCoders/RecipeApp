@@ -56,7 +56,12 @@ class DetailViewController: UIViewController {
         ratingLabel.text = recipe.rating.description
     }
     
-
+    @IBAction func shareRecipe(_ sender: Any) {
+        let alert = UIAlertController(title: "Error", message: "Esta funcionalidad no esta disponible!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Pues vale!", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
